@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lita's 30th Birthday Invitation - Black Owl Surabaya</title>
+    <title>Lita's 32nd Birthday Invitation - Kedai Gardenia Surabaya</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* ========================================================== */
-        /* CSS STYLES */
+        /* CSS STYLES (NO DESIGN CHANGE) */
         /* ========================================================== */
 
         :root {
@@ -20,84 +20,48 @@
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-black);
-            color: white;
-            font-family: var(--font-main);
-            overflow-x: hidden;
+            margin: 0; padding: 0; background-color: var(--color-black); color: white; font-family: var(--font-main); overflow-x: hidden;
         }
         
         /* ---------------------------------------------------------- */
-        /* Landing Page (Halaman Depan) */
+        /* Landing Page */
         /* ---------------------------------------------------------- */
         #landing-page {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-black);
-            z-index: 99; /* Pastikan di atas semua elemen lain */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 1s ease-in-out;
-            text-align: center;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--color-black); z-index: 99; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: opacity 1s ease-in-out; text-align: center;
         }
-
         #landing-page .intro-text {
-            color: white;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            font-weight: 300;
+            color: white; font-size: 1.5em; margin-bottom: 20px; font-weight: 300;
         }
-        
         #landing-page .intro-name {
-            font-family: var(--font-script);
-            font-size: 4em;
-            color: var(--color-gold);
-            margin-bottom: 50px;
+            font-family: var(--font-script); font-size: 4em; color: var(--color-gold); margin-bottom: 50px;
         }
 
-        /* Tombol Utama (Invitation) */
+        /* Main Invitation Button */
         .main-cta-button {
-            background: var(--color-gold);
-            color: var(--color-black);
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.4em;
-            font-weight: 700;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.2s;
+            background: var(--color-gold); color: var(--color-black); border: none; padding: 15px 40px; font-size: 1.4em; font-weight: 700; border-radius: 5px; cursor: pointer; text-decoration: none; transition: background 0.3s, transform 0.2s;
         }
         .main-cta-button:hover {
-            background: var(--color-light-gold);
-            transform: translateY(-2px);
+            background: var(--color-light-gold); transform: translateY(-2px);
         }
 
         /* ---------------------------------------------------------- */
-        /* Background Animasi */
+        /* Background Animation */
         /* ---------------------------------------------------------- */
         .particle-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; z-index: 1; background-color: var(--color-black);
         }
-
         .particle { position: absolute; border-radius: 50%; opacity: 0.8; animation: moveParticles linear infinite; filter: blur(0.5px); }
         @keyframes moveParticles { 0% { transform: translateY(100vh) scale(0); opacity: 0; } 20% { opacity: 0.6; } 50% { opacity: 0.9; } 80% { opacity: 0.6; } 100% { transform: translateY(-10vh) scale(1); opacity: 0; } }
 
         /* ---------------------------------------------------------- */
-        /* Konten Utama (Tersembunyi Awalnya) */
+        /* Main Content (Initially Hidden) */
         /* ---------------------------------------------------------- */
         .container {
-            position: relative; z-index: 10; display: none; /* Awalnya disembunyikan */
+            position: relative; z-index: 10; display: none; /* Initially hidden */
             flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 20px;
         }
 
-        /* Sisa CSS Undangan (Frame, Teks Lita 30, Countdown, dll.) */
+        /* Invitation Frame and Text Styling */
         .invitation-frame { background: rgba(0, 0, 0, 0.85); border: 4px solid var(--color-gold); padding: 40px 30px; max-width: 500px; width: 90%; box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); border-radius: 5px; position: relative; }
         .invitation-frame::before, .invitation-frame::after { content: ''; position: absolute; background: var(--color-gold); width: 30px; height: 4px; }
         .invitation-frame::before { top: -4px; left: -4px; }
@@ -109,6 +73,7 @@
         .header-content { margin-bottom: 30px; }
         .title-sub { font-size: 1em; letter-spacing: 2px; color: white; margin-bottom: 5px; font-weight: 300; }
         .title-name { font-family: var(--font-script); font-size: 8em; line-height: 1; color: var(--color-gold); text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); margin: 0; }
+        /* Usia diperbarui ke 32 */
         .title-age { font-size: 8em; color: white; line-height: 0.8; margin-top: -30px; font-weight: 700; }
         .details-section { margin-top: 20px; }
         .detail-item { margin: 10px 0; font-size: 1.05em; color: white; line-height: 1.4; }
@@ -134,7 +99,7 @@
 <body>
     
     <audio id="party-music" loop>
-        <source src="[URL_FILE_LAGU_PARTY_ANDA.mp3]" type="audio/mpeg">
+        <source src="http://googleusercontent.com/file_content/0" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -155,12 +120,12 @@
             <div class="header-content">
                 <p class="title-sub">Birthday Invitation</p>
                 <h1 class="title-name">Lita</h1>
-                <h2 class="title-age">30</h2>
+                <h2 class="title-age">32</h2>
             </div>
 
             <div class="details-section">
                 <p style="margin-top:0; font-size: 0.9em; color: rgba(255,255,255,0.9);">
-                    We are thrilled to invite you to celebrate this special day!
+                    We are thrilled to invite you to celebrate this special day.
                 </p>
                 
                 <div class="detail-item">
@@ -172,12 +137,12 @@
                 </div>
                 
                 <div class="detail-item">
-                    Black Owl Surabaya
+                    Kedai Gardenia
                     <br>
-                    <span style="font-size:0.8em; opacity:0.8;">[Full Address of Black Owl Surabaya]</span>
+                    <span style="font-size:0.8em; opacity:0.8;">Jl. Mawar No. 7, Surabaya</span>
                 </div>
 
-                <p class="dresscode">Dresscode: <span>BLACK GOLD</span></p>
+                <p class="dresscode">Dresscode: <span>BLACK</span></p>
             </div>
             
             <h3 style="color:var(--color-gold); font-size:1.1em; margin-bottom:10px;">Countdown to the Event</h3>
@@ -193,14 +158,14 @@
                 
                 <div class="map-container">
                     <iframe 
-                        src="http://googleusercontent.com/maps.google.com/9" 
+                        src="https://share.google/JalaPJJMvsJJ5W76F" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
                 
-                <a href="https://maps.app.goo.gl/ContohLinkGoogleMapsBlackOwl0" target="_blank" class="cta-button">
+                <a href="https://share.google/JalaPJJMvsJJ5W76F" target="_blank" class="cta-button">
                     Get Directions (Google Maps)
                 </a>
             </div>
@@ -214,15 +179,15 @@
             
         </div>
         
-        <p style="margin-top: 40px; font-size: 0.8em; color: #aaa; opacity:0.7;">See you at Black Owl!</p>
+        <p style="margin-top: 40px; font-size: 0.8em; color: #aaa; opacity:0.7;">See you at Kedai Gardenia!</p>
 
     </div>
 
-    <button id="music-button" onclick="toggleMusic()" style="display: none;">&#9835;</button> 
+    <button id="music-button" onclick="toggleMusic()" style="display: none;">♫</button> 
 
     <script>
         // ==========================================================
-        // JAVASCRIPT LOGIC
+        // JAVASCRIPT LOGIC 
         // ==========================================================
 
         const music = document.getElementById('party-music');
@@ -231,52 +196,51 @@
         const mainInvitation = document.getElementById('main-invitation');
         let musicPlaying = false;
 
-        // Fungsi untuk membuka undangan (dipanggil dari tombol "Invitation")
+        // Function to open the invitation (triggered by "Invitation" button)
         function openInvitation() {
-            // 1. Coba putar musik
             music.play().then(() => {
                 musicPlaying = true;
-                musicButton.innerHTML = '&#9833;'; // Ganti ikon ke pause
-                musicButton.style.display = 'block'; // Tampilkan tombol kontrol musik
+                musicButton.innerHTML = '♩'; 
+                musicButton.style.display = 'block'; 
             }).catch(error => {
                 console.warn("Autoplay was prevented. Music will start upon next interaction.");
-                // Jika autoplay diblokir, tombol kontrol musik tetap ditampilkan
                 musicButton.style.display = 'block';
             });
 
-            // 2. Hilangkan landing page dengan transisi fade out
+            // Hide landing page with fade out transition
             landingPage.style.opacity = '0';
             setTimeout(() => {
                 landingPage.style.display = 'none';
-                mainInvitation.style.display = 'flex'; // Tampilkan konten utama
-            }, 1000); // Waktu harus sama dengan transisi CSS (1s)
+                mainInvitation.style.display = 'flex'; // Show main content
+            }, 1000); 
         }
 
-        // Fungsi untuk mengontrol musik (Play/Pause)
+        // Function to control music (Play/Pause)
         function toggleMusic() {
             if (musicPlaying) {
                 music.pause();
-                musicButton.innerHTML = '&#9835;';
+                musicButton.innerHTML = '♫';
                 musicPlaying = false;
             } else {
                 music.play().catch(error => {
                     console.error("Playback failed:", error);
                 });
-                musicButton.innerHTML = '&#9833;';
+                musicButton.innerHTML = '♩';
                 musicPlaying = true;
             }
         }
 
-        // Fungsi RSVP yang juga memastikan musik berbunyi
+        // RSVP function that also ensures music starts
         function playMusicAndRsvp(status) {
             if (!musicPlaying) {
                  music.play().catch(error => {
-                    console.warn("Music starts now.");
+                    console.warn("Music starting now.");
                 });
-                musicButton.innerHTML = '&#9833;';
+                musicButton.innerHTML = '♩';
                 musicPlaying = true;
             }
 
+            // ENGLISH ALERT MESSAGES
             if (status === 'attend') {
                 alert('Thank you! Your RSVP has been received.');
             } else {
@@ -285,7 +249,7 @@
         }
         
         // ----------------------------------------------------------
-        // Countdown Timer & Background Animation (SAMA SEPERTI SEBELUMNYA)
+        // Countdown Timer & Background Animation (NO CHANGE)
         // ----------------------------------------------------------
         const targetDate = new Date("Oct 28, 2025 19:00:00").getTime(); 
         const countdownFunction = setInterval(function() {
