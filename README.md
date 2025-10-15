@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lita's 32nd Birthday Invitation - Kedai Gardenia Surabaya</title>
+    <title>Lita's 30th Birthday Invitation - Black Owl Surabaya</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* ========================================================== */
@@ -73,7 +73,6 @@
         .header-content { margin-bottom: 30px; }
         .title-sub { font-size: 1em; letter-spacing: 2px; color: white; margin-bottom: 5px; font-weight: 300; }
         .title-name { font-family: var(--font-script); font-size: 8em; line-height: 1; color: var(--color-gold); text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); margin: 0; }
-        /* Usia diperbarui ke 32 */
         .title-age { font-size: 8em; color: white; line-height: 0.8; margin-top: -30px; font-weight: 700; }
         .details-section { margin-top: 20px; }
         .detail-item { margin: 10px 0; font-size: 1.05em; color: white; line-height: 1.4; }
@@ -120,7 +119,7 @@
             <div class="header-content">
                 <p class="title-sub">Birthday Invitation</p>
                 <h1 class="title-name">Lita</h1>
-                <h2 class="title-age">32</h2>
+                <h2 class="title-age">30</h2>
             </div>
 
             <div class="details-section">
@@ -137,12 +136,12 @@
                 </div>
                 
                 <div class="detail-item">
-                    Kedai Gardenia
+                    Black Owl Surabaya
                     <br>
-                    <span style="font-size:0.8em; opacity:0.8;">Jl. Mawar No. 7, Surabaya</span>
+                    <span style="font-size:0.8em; opacity:0.8;">[Full Address of Black Owl Surabaya]</span>
                 </div>
 
-                <p class="dresscode">Dresscode: <span>BLACK</span></p>
+                <p class="dresscode">Dresscode: <span>BLACK GOLD</span></p>
             </div>
             
             <h3 style="color:var(--color-gold); font-size:1.1em; margin-bottom:10px;">Countdown to the Event</h3>
@@ -158,14 +157,14 @@
                 
                 <div class="map-container">
                     <iframe 
-                        src="https://share.google/JalaPJJMvsJJ5W76F" 
+                        src="http://googleusercontent.com/maps.google.com/8" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
                 
-                <a href="https://share.google/JalaPJJMvsJJ5W76F" target="_blank" class="cta-button">
+                <a href="http://googleusercontent.com/maps.google.com/9" target="_blank" class="cta-button">
                     Get Directions (Google Maps)
                 </a>
             </div>
@@ -173,13 +172,13 @@
             <div class="rsvp-section">
                 <h3 style="color:var(--color-gold); font-size:1.1em;">RSVP</h3>
                 <p style="font-size:0.9em; opacity:0.9;">Kindly confirm your attendance:</p>
-                <button class="cta-button rsvp-button" onclick="playMusicAndRsvp('attend');">I Will Attend</button>
-                <button class="cta-button rsvp-button" style="background: white; color: black; margin-left: 10px;" onclick="playMusicAndRsvp('decline');">Regretfully Decline</button>
+                <button class="cta-button rsvp-button" onclick="handleRsvp('attend');">I Will Attend</button>
+                <button class="cta-button rsvp-button" style="background: white; color: black; margin-left: 10px;" onclick="handleRsvp('decline');">Regretfully Decline</button>
             </div>
             
         </div>
         
-        <p style="margin-top: 40px; font-size: 0.8em; color: #aaa; opacity:0.7;">See you at Kedai Gardenia!</p>
+        <p style="margin-top: 40px; font-size: 0.8em; color: #aaa; opacity:0.7;">See you at Black Owl!</p>
 
     </div>
 
@@ -198,13 +197,17 @@
 
         // Function to open the invitation (triggered by "Invitation" button)
         function openInvitation() {
+            // **PERUBAHAN:** Memastikan musik menyala tanpa penundaan setelah interaksi pengguna (klik)
+            // Ini mengatasi masalah batasan autoplay browser.
             music.play().then(() => {
                 musicPlaying = true;
-                musicButton.innerHTML = '♩'; 
+                musicButton.innerHTML = '♩'; // Tunjukkan ikon Pause (karena musik sedang main)
                 musicButton.style.display = 'block'; 
             }).catch(error => {
-                console.warn("Autoplay was prevented. Music will start upon next interaction.");
-                musicButton.style.display = 'block';
+                 // Jika play() gagal (jarang terjadi setelah interaksi), pastikan tombol terlihat
+                 console.warn("Autoplay was prevented despite user interaction:", error);
+                 musicButton.innerHTML = '♫';
+                 musicButton.style.display = 'block';
             });
 
             // Hide landing page with fade out transition
@@ -219,27 +222,19 @@
         function toggleMusic() {
             if (musicPlaying) {
                 music.pause();
-                musicButton.innerHTML = '♫';
+                musicButton.innerHTML = '♫'; // Tunjukkan ikon Play (karena musik sedang diam)
                 musicPlaying = false;
             } else {
                 music.play().catch(error => {
                     console.error("Playback failed:", error);
                 });
-                musicButton.innerHTML = '♩';
+                musicButton.innerHTML = '♩'; // Tunjukkan ikon Pause (karena musik sedang main)
                 musicPlaying = true;
             }
         }
 
-        // RSVP function that also ensures music starts
-        function playMusicAndRsvp(status) {
-            if (!musicPlaying) {
-                 music.play().catch(error => {
-                    console.warn("Music starting now.");
-                });
-                musicButton.innerHTML = '♩';
-                musicPlaying = true;
-            }
-
+        // RSVP function
+        function handleRsvp(status) {
             // ENGLISH ALERT MESSAGES
             if (status === 'attend') {
                 alert('Thank you! Your RSVP has been received.');
